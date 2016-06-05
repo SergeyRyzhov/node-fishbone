@@ -1,0 +1,42 @@
+- bodyclass=''
+doctype html
+html(lang=culture)
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    
+    block headermeta
+    
+    title= labels.site.title
+    
+    link(rel="stylesheet", href="/vendor/css/material.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="icon", href="/img/favicon.ico", type="image/x-icon")
+    link(rel="shortcut icon", href="/img/favicon.ico", type="image/x-icon")
+    script(src="/vendor/js/material.js")
+    
+    block headerscripts
+  body(class=bodyclass)
+    .mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
+      header.mdl-layout__header
+          .mdl-layout__header-row
+            span.mdl-layout-title.site-title= labels.site.title
+            span.mdl-layout-title.site-short-title= labels.site.shortTitle
+            .mdl-layout-spacer
+            if user.isAuthenticated
+              a.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--mini-fab.mdl-js-ripple-effect.mdl-button--colored(href='#account')
+                i.material-icons add
+            - var langAttributes = {'data-bind': {component: {name: 'language-selector', params: labels.localization }}};
+            div&attributes(langAttributes)
+            // .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label.mdl-textfield--align-right
+            //   label.mdl-button.mdl-js-button.mdl-button--icon(for='fixed-header-drawer-exp')
+            //     i.material-icons search
+            //   .mdl-textfield__expandable-holder
+            //     input#fixed-header-drawer-exp.mdl-textfield__input(type='text', name='search', placeholder= labels.search.title)
+        .mdl-layout__drawer
+          span.mdl-layout-title=labels.site.shortTitle
+          - var menuAttributes = {'data-bind': {component: {name: 'menu', params: labels.menu }}};
+          div&attributes(menuAttributes)
+        main.mdl-layout__content
+          block content

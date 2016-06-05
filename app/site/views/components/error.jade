@@ -1,0 +1,7 @@
+h4= labels.errors.components.loading.title
+p= labels.errors.components.loading.body
+// ko if: hasError
+h3(data-bind='text:exception.message')
+h4(data-bind='text:exception.error.status')
+pre(data-bind='text:exception.error.stack')
+// /ko

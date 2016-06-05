@@ -1,0 +1,100 @@
+.site-title {
+    display: block;
+}
+
+.site-short-title {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .site-title {
+        display: none;
+    }
+
+    .site-short-title {
+        display: block;
+    }
+}
+
+/*Statistics*/
+
+/*Common*/
+
+td > p > span {
+    text-align: right;
+}
+
+td > p > label {
+    text-align: left;
+    padding-right: 10%;
+}
+
+td > p > label::after {
+    content: ':';
+}
+
+th > small::before {
+    content: ' ';
+}
+
+.scrollx {
+    overflow-x: auto;
+}
+
+.scroll {
+    overflow-y: auto;
+}
+
+.scroll {
+    overflow: auto;
+}
+
+th {
+    text-align: center !important;
+}
+
+/*Mobile header*/
+
+td > h5 > span {
+    text-align: right;
+}
+
+td > h5 > label {
+    text-align: left;
+    padding-right: 5%;
+}
+
+td > h5 > label::after {
+    content: ':';
+}
+
+td > div> h6 > small::before {
+    content: ' ';
+}
+
+/*Mobile content*/
+
+td > div > p > span {
+    text-align: right;
+}
+
+td > div > p > label {
+    text-align: left;
+    padding-right: 10%;
+}
+
+td > div > p >label::after {
+    content: ':';
+}
+
+/*Refill*/
+
+.refill-bulk-table {
+  
+  
+}
+
+/*.refill-bulk-table > tbody>*/ 
+td > div.mdl-textfield{
+  width: auto !important;
+}

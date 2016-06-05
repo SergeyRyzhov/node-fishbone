@@ -1,0 +1,27 @@
+.telegram-card-wide.mdl-card {
+	width: 100%;
+}
+.telegram-card-wide > .mdl-card__title {
+	color: #fff;
+	height: 176px;
+	background: url('../img/botlogo.png') center / cover;
+}
+.telegram-card-wide > .mdl-card__menu {
+	color: #fff;
+}
+
+#token-snackbar.mdl-js-snackbar.mdl-snackbar
+{
+	min-width:100px;
+}
+
+#token-snackbar > button.mdl-snackbar__action
+{
+	width:0px;
+	padding:0px;
+	margin:0px;
+}
+
+.change-password-card.mdl-card{
+	width: 100%;
+}
