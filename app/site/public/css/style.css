@@ -86,15 +86,3 @@ td > div > p > label {
 td > div > p >label::after {
     content: ':';
 }
-
-/*Refill*/
-
-.refill-bulk-table {
-  
-  
-}
-
-/*.refill-bulk-table > tbody>*/ 
-td > div.mdl-textfield{
-  width: auto !important;
-}
