@@ -1,0 +1,18 @@
+- var _labels = labels.account.telegram;
+.telegram-card-wide.mdl-card.mdl-shadow--2dp
+	.mdl-card__title
+		h2.mdl-card__title-text=_labels.title
+	.mdl-card__supporting-text
+		p=_labels.setup
+		
+		p(data-bind="visible: hasUsers")
+			=_labels.users
+			p(data-bind="foreach: users")
+				span(data-bind="text: text")
+				a(data-bind="text: username, attr: { href: link }")
+	.mdl-card__actions.mdl-card--border
+		a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href=_labels.link, target='_blank')=_labels.open
+		a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(type='button', data-bind="click: getToken.bind(null, 'token-snackbar')")=_labels.token
+#token-snackbar.mdl-js-snackbar.mdl-snackbar(style="min-width:100px;")
+	.mdl-snackbar__text.mdl-typography--display-2
+	button.mdl-snackbar__action(style="width:0px;padding:0px;margin:0px;")

@@ -1,0 +1,11 @@
+h4=labels.auth.signin.title
+form(method='POST', action='/auth/signin')
+	.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+		input#login.mdl-textfield__input(type='text', name='login', required)
+		label.mdl-textfield__label(for='login')=labels.auth.signin.login
+	br
+	.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+		input#password.mdl-textfield__input(type='password', name='password', required)
+		label.mdl-textfield__label(for='password')=labels.auth.signin.password
+	br
+	button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent(type='submit')=labels.auth.signin.submit

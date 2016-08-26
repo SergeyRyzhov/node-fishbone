@@ -1,0 +1,14 @@
+.mdl-grid
+	.mdl-cell.mdl-cell--10-col
+		.mdl-typography--title=labels.account.title
+	.mdl-cell.mdl-cell--2-col
+		form(method='POST', action='/auth/logout')
+			button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent(type='submit')=labels.auth.logout.submit
+.mdl-grid
+	.mdl-cell.mdl-cell--6-col
+		// ko component: {name: "change-password", params: { }}
+		// /ko
+	.mdl-cell.mdl-cell--6-col
+		// ko component: {name: "telegram-bot", params: { }}
+		// /ko
+

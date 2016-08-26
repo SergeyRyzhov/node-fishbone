@@ -1,0 +1,9 @@
+extends layout
+- bodyclass=''
+block headermeta
+block headerscripts
+  script(src="/vendor/js/require.js", data-main="/js/startup")
+  link(rel='stylesheet', href='/css/style.css')
+block content
+  - var errorAttributes = {'data-bind': {component: {name: 'error', params: exception }}};
+  div&attributes(errorAttributes)
