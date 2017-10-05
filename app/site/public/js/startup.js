@@ -47,7 +47,7 @@ requirejs.config({
         jquery: {
             exports: '$'
         },
-        rootapp: {
+        app: {
             deps: ['components/main', 'navigator', 'bindings']
         },
         'jquery.cookie': {
@@ -64,4 +64,4 @@ requirejs.config({
     }
 });
 
-requirejs(['rootapp']);
+requirejs(['app']);
